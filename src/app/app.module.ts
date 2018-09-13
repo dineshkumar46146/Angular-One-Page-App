@@ -6,6 +6,7 @@ import { HeaderComponent } from './header.component';
 import { BodyComponent } from './body.component';
 import { ContactComponent } from './contact.component';
 import { HomeComponent } from './home.component';
+import { PaginationComponent } from './pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { HomeComponent } from './home.component';
     HeaderComponent,
     BodyComponent,
     ContactComponent,
-    HomeComponent
+    HomeComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule
