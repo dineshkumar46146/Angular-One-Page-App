@@ -2,20 +2,28 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header.component';
-import { BodyComponent } from './body.component';
-import { ContactComponent } from './contact.component';
-import { HomeComponent } from './home.component';
 import { PaginationComponent } from './pagination/pagination.component';
+import { HeaderComponent } from './header/header.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { BodyComponent } from './body/body.component';
+import { FooterComponent } from './footer/footer.component';
+import { HomeComponent } from './header/home/home.component';
+import { AboutComponent } from './header/about/about.component';
+import { ProductComponent } from './header/product/product.component';
+import { ContactComponent } from './header/contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    PaginationComponent,
     HeaderComponent,
+    SidenavComponent,
     BodyComponent,
-    ContactComponent,
+    FooterComponent,
     HomeComponent,
-    PaginationComponent
+    AboutComponent,
+    ProductComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule
