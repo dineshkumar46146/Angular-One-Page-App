@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule }    from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { PaginationComponent } from './pagination/pagination.component';
@@ -11,6 +13,10 @@ import { HomeComponent } from './header/home/home.component';
 import { AboutComponent } from './header/about/about.component';
 import { ProductComponent } from './header/product/product.component';
 import { ContactComponent } from './header/contact/contact.component';
+import { AppService } from './service/app.service';
+import { AppMockService } from './service/app-mock.service';
+import { AppMockBackService } from './service/app-mock-back.service';
+import { AppJsonService } from './service/app-json.service';
 
 @NgModule({
   declarations: [
@@ -26,9 +32,11 @@ import { ContactComponent } from './header/contact/contact.component';
     ContactComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ { provide: AppService, useClass: AppJsonService } ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

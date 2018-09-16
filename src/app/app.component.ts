@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AppService } from './service/app.service';
 
 @Component({
   selector: 'app-root',
@@ -7,8 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'my-app';
-  action = 'home';
-  setAction(action){
-    this.action= action;
+  action= null;
+  constructor(private appService :AppService) {
+
+  }
+  ngOnInit() {
+    this.appService.getNavObs().subscribe(data => {
+      this.action = data;
+    })
   }
 }
