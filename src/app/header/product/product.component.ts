@@ -11,7 +11,7 @@ export class ProductComponent implements OnInit {
   action2 = 'product';
   products = null;//PRODUCT_LIST;
   constructor() {
-    this.fullImagePath = './img/img1.jpg';
+    this.fullImagePath = '../img/img1.jpg';
   }
   setAction(action){
     this.action2 = action;

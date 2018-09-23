@@ -12,8 +12,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   // action = 'home';
   productList: Array<Product> = null;
   subscription: any;
-  name: string;
-  code: string;
+ product = new Product( {code:'same'});
   constructor(private appService: AppService) {
   }
 
@@ -29,8 +28,8 @@ export class HomeComponent implements OnInit, OnDestroy {
     }
   }
   addProduct() {
-    console.log(this.name , this.code);
-    this.appService.addProduct({'code' : this.code, name : this.name}).subscribe(data =>
+    console.log(this.product);
+    this.appService.addProduct(this.product).subscribe(data =>
       {
         console.log('Created product ', data);
       })
